@@ -4,13 +4,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "server": "nodemon server/server.js"
+    "server": "nodemon server/server.js",
+    "client": "cd client && yarn run start",
+    "dev-server": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.18.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "bcrypt": "^3.0.1",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.11.0",
